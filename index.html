@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sheeesh</title>
+    <style>
+        body {
+            background-color: #780000;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            color:white;
+        }
+
+        .left{
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 30%;
+            text-align: center;
+        }
+
+
+        .right{
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 69%;
+        }
+
+        @keyframes flash {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+
+        .flash {
+            animation: flash 1s linear infinite;
+         }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+        <div>
+            <img style="margin: auto; width: 60%; height: auto;" src="logo.png" alt="" srcset="">
+        </div>
+        <div>
+            <img src="images_yugamin.webp"  class="flash" style="margin: auto; width: auto; height: 60vh;" alt="" srcset="">
+        </div>
+    </div>
+    <div class="right">
+        <div style="text-align:center">
+            <h2>Sheeesh, your files have been encrypted!</h2>
+        </div>
+        <div>
+            <p style="background-color: white;max-height: 400px; overflow-y: scroll;color:black">
+                What Happened to My Computer? <br>
+Your important files are encrypted. <br>
+Many of your documents, photos, videos, databases and other files are no longer accessible because they have been encrypted. Maybe you are busy looking for a way to recover your files, but do not waste your time. Nobody can recover your files without our decryption service. <br>
+
+Can I Recover My Files? <br>
+Sure. We guarantee that you can recover all your files safely and easily. But you have not so enough time.<br>
+You can decrypt some of your files for free. Try now by clicking <Decrypt>.<br>
+But if you want to decrypt all your files, you need to pay.<br>
+You only have 3 days to submit the payment. After that the price will be doubled.<br>
+Also, if you don't pay in 7 days, you won't be able to recover your files forever.<br>
+We will have free events for users who are so poor that they couldn't pay in 6 months.<br>
+<br>
+How Do I Pay?<br>
+Payment is accepted in <b style="color: red;">akasupa</b> only. For more information, click <About></About> <b style="color: red;">akasupa</b>.<br>
+Please check the current price of <b style="color: red;">akasupa</b> and buy some <b style="color: red;">akasupa</b>s. For more information, click How to buy <b style="color: red;">akasupa</b>s.<br>
+And send the correct amount to the address specified in this window.<br>
+After your payment, click <Check Payment>. Best time to check: 9:00am - 11:00am GMT from Monday to Friday.<br>
+Once the payment is checked, you can start decrypting your files immediately.<br>
+<br>
+Contact<br>
+If you need our assistance, send a message by clicking <Contact Us>.<br>
+    <br>
+We strongly recommend you to not remove this software, and disable your anti-virus for a while, until you pay and the payment gets processed. If your anti-virus gets updated and removes this software automatically, it will not be able to recover your files even if you pay!<br>
+            </p>
+        </div>
+        <div style="display: flex;">
+            <div style="flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 30%;">
+                <img src="222.PNG" style="width: 99%;height: auto;" alt="">
+            </div>
+            <div>
+                <p style="color:yellow">Send $400 worth of akasupa to this YouTube Channel:</p>
+                <input type="text" value="https://www.youtube.com/channel/UCP4nMSTdwU1KqYWu3UH5DHQ" style="width: 400px; font-size: small;">
+                <button id="copy-btn">Copy</button>
+            </div>
+        </div>
+        <div style="display: flex;text-align: center;margin-top: 20px;justify-content: center">
+            <div style="flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 50%;">
+                <button style="width: 300px; font-weight: bold;" id="check-btn">Check Payment</button>
+            </div>
+            <div style="flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 50%;">
+                <button style="width: 300px; font-weight: bold;" id="de-btn">Decrypt</button>
+            </div>
+        </div>
+    </div>
+    <audio controls style="display: hideen;" id="audio-elm">
+        <source src="pomu.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+
+    <audio controls style="display: hideen;" id="audio-elm2">
+        <source src="pomu2.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+        const shell = require('electron').shell;
+        const copyBtn = document.querySelector('#copy-btn');
+        const checkBtn = document.querySelector('#check-btn');
+        const deBtn = document.querySelector('#de-btn');
+
+        const audioEln = document.querySelector('#audio-elm');
+        const audioEln2 = document.querySelector('#audio-elm2');
+
+        copyBtn.addEventListener('click',()=>{
+            shell.openExternal("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        });
+        checkBtn.addEventListener('click',()=>{
+            audioEln.pause();
+            audioEln.currentTime = 0;
+            audioEln.play();
+        })
+
+        deBtn.addEventListener('click',()=>{
+            audioEln2.pause();
+            audioEln2.currentTime = 0;
+            audioEln2.play();
+        })
+    </script>
+  </body>
+</html>

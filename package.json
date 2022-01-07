@@ -1,0 +1,41 @@
+{
+  "name": "sheesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.1",
+    "electron-builder": "~22.10.5"
+  },
+  "build": {
+    "appId": "com.theeditorstudio.sheesh",
+    "productName": "Sheeesh",
+    "mac": {
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build_config/mac/entitlements.mac.plist",
+      "entitlementsInherit": "build_config/mac/entitlements.mac.plist",
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "sign": false
+    },
+    "win": {
+      "target": "portable",
+      "publisherName": "ANYCOLOR Inc."
+    },
+    "linux": {
+      "target": "AppImage",
+      "vendor": "KusaLand",
+      "category": "AudioVideo"
+    }
+  }
+}
